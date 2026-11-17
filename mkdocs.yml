@@ -84,3 +84,7 @@ nav:
       - u06/index.md
       - "6.1 Copybooks y diseño modular": u06/01-copybooks.md
       - "6.2 · Ejercicios de copybooks y diseño modular": u06/ejercicios-copybooks.md
+  - "U7 · Entrada/salida y GUI":
+      - u07/index.md
+      - "7.1 Archivos de texto": u07/01-archivos.md
+      - "7.2 · Ejercicios de archivos de texto": u07/ejercicios-archivos.md

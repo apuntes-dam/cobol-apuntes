@@ -10,9 +10,10 @@ Recorrido sugerido: **lee la unidad, practícala y marca la casilla del final** 
 | [U4 · Programación orientada a objetos](u04/index.md) | Subprogramas (CALL/LINKAGE/GOBACK): lo más parecido a una clase | 5 | <span class="u-estado" data-unit="u04"></span> |
 | [U5 · Herencia, clases abstractas e interfaces](u05/index.md) | REDEFINES y EVALUATE con discriminador; sin herencia ni polimorfismo reales | 4 | <span class="u-estado" data-unit="u05"></span> |
 | [U6 · Diseño de programas con POO](u06/index.md) | Copybooks (COPY) y diseño modular; sin SOLID tal cual | 4 | <span class="u-estado" data-unit="u06"></span> |
+| [U7 · Entrada/salida y GUI](u07/index.md) | Archivos de texto (LINE SEQUENTIAL, FILE STATUS); consola ya vista, sin GUI | 5 | <span class="u-estado" data-unit="u07"></span> |
 
 !!! warning "Web en construcción"
-    Están las **unidades 1 a 6**. Las demás se irán añadiendo por fases.
+    Están las **unidades 1 a 7**. Las demás se irán añadiendo por fases.
 
 !!! tip "Documentación oficial"
     Para ampliar cualquier tema: el [manual de GnuCOBOL](https://gnucobol.sourceforge.io/doc/gnucobol.html).
