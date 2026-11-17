@@ -72,3 +72,15 @@ nav:
       - "3.2-3.5 Mapas, conjuntos, JSON y XML": u03/02-mas-alla.md
       - "U3.0 · Cadenas": u03/cadenas.md
       - "U3.1 · Listas y tuplas": u03/tablas.md
+  - "U4 · Programación orientada a objetos":
+      - u04/index.md
+      - "4.1 Subprogramas": u04/01-subprogramas.md
+      - "4.2 · Ejercicios de subprogramas": u04/ejercicios-subprogramas.md
+  - "U5 · Herencia, clases abstractas e interfaces":
+      - u05/index.md
+      - "5.1 Sin herencia ni polimorfismo": u05/01-sin-herencia.md
+      - "5.2 · Ejercicios sin herencia ni polimorfismo": u05/ejercicios-sin-herencia.md
+  - "U6 · Diseño de programas con POO":
+      - u06/index.md
+      - "6.1 Copybooks y diseño modular": u06/01-copybooks.md
+      - "6.2 · Ejercicios de copybooks y diseño modular": u06/ejercicios-copybooks.md
