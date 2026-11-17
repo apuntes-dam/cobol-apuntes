@@ -38,8 +38,8 @@ Pide un entero positivo y muestra la cuenta atrás hasta cero. Repite la petici�
 
 ## Ejercicio 2.3.4
 
-Pide un entero. Si la entrada no es correcta, muestra `La entrada no es correcta` y vuelve a lanzar la excepción capturada.
+Pide un entero. Si la entrada no es correcta, muestra `La entrada no es correcta` y termina el programa marcando el fallo (en COBOL no hay una excepción que «relanzar»: simplemente no sigas y deja constancia del error).
 
 ## Ejercicio 2.3.5
 
-Pide una contraseña y, si no coincide con la guardada, lanza una excepción propia con el mensaje `Incorrect Password!!`.
+Pide una contraseña y, si no coincide con la guardada, muestra el mensaje `Incorrect Password!!` y termina el programa marcando el fallo (en COBOL no se «lanza» nada: se comprueba y se actúa).
