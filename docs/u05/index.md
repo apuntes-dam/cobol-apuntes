@@ -1,4 +1,4 @@
-# U5 · Herencia, clases abstractas e interfaces
+# U5 · Sin herencia ni polimorfismo
 
 COBOL no tiene herencia ni polimorfismo en tiempo de ejecución. La alternativa procedural: `REDEFINES` para reinterpretar los mismos bytes, y un campo discriminador con `EVALUATE`.
 

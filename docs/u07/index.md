@@ -1,4 +1,4 @@
-# U7 · Entrada/salida y GUI
+# U7 · Archivos (sin GUI)
 
 La consola ya se vio en la unidad 1. Aquí el núcleo son los **archivos de texto**: `LINE SEQUENTIAL`, `FILE STATUS`, escribir y leer hasta el final. Sin interfaces gráficas: GnuCOBOL no tiene una biblioteca de ventanas que funcione aquí.
 

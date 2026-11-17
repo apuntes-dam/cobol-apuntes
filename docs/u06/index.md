@@ -1,4 +1,4 @@
-# U6 · Diseño de programas con POO
+# U6 · Copybooks y diseño modular
 
 Cómo COBOL organiza programas grandes sin clases: **copybooks** (`COPY`) como contratos de datos compartidos, y qué significa "diseñar bien" cuando los cinco principios SOLID no se trasladan tal cual.
 

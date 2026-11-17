@@ -1,4 +1,4 @@
-# U4 · Programación orientada a objetos
+# U4 · Subprogramas
 
 COBOL no tiene clases ni objetos. Lo más parecido que tiene a una unidad reutilizable con una interfaz definida es un **subprograma** (`CALL`, `LINKAGE SECTION`, `GOBACK`).
 
