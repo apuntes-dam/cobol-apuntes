@@ -1,6 +1,6 @@
 # 7.2 · Ejercicios de archivos de texto
 
-<div class="ej-gate" data-unit="u07" data-nombre="U7 · Entrada/salida y GUI"></div>
+<div class="ej-gate" data-unit="u07" data-nombre="U7 · Archivos (sin GUI)"></div>
 
 Para el ejercicio 7.1.4 (solo explicación), entrega la respuesta razonada, no código.
 

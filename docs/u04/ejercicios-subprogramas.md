@@ -1,6 +1,6 @@
 # 4.2 · Ejercicios de subprogramas
 
-<div class="ej-gate" data-unit="u04" data-nombre="U4 · Programación orientada a objetos"></div>
+<div class="ej-gate" data-unit="u04" data-nombre="U4 · Subprogramas"></div>
 
 Para cada ejercicio, define primero el contrato (parámetros, modo de paso, qué significa cada estado) antes de escribir el código.
 

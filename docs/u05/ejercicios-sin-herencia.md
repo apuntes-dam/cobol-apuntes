@@ -1,6 +1,6 @@
 # 5.2 · Ejercicios sin herencia ni polimorfismo
 
-<div class="ej-gate" data-unit="u05" data-nombre="U5 · Herencia, clases abstractas e interfaces"></div>
+<div class="ej-gate" data-unit="u05" data-nombre="U5 · Sin herencia ni polimorfismo"></div>
 
 Antes de programar, decide qué campo es el discriminador y qué vistas (`REDEFINES`) tienen sentido con cada valor.
 

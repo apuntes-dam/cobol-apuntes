@@ -1,6 +1,6 @@
 # 6.2 · Ejercicios de copybooks y diseño modular
 
-<div class="ej-gate" data-unit="u06" data-nombre="U6 · Diseño de programas con POO"></div>
+<div class="ej-gate" data-unit="u06" data-nombre="U6 · Copybooks y diseño modular"></div>
 
 Para los ejercicios de solo explicación, entrega la respuesta razonada, no solo código.
 

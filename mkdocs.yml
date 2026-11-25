@@ -88,3 +88,8 @@ nav:
       - u07/index.md
       - "7.1 Archivos de texto": u07/01-archivos.md
       - "7.2 · Ejercicios de archivos de texto": u07/ejercicios-archivos.md
+  - "U9 · Archivos indexados (sin SQL real)":
+      - u09/index.md
+      - "9.1 Archivos indexados": u09/01-archivos-indexados.md
+      - "9.2 En mainframe real: VSAM y Db2": u09/02-vsam-db2.md
+      - "9.3 · Ejercicios de archivos indexados": u09/ejercicios-archivos-indexados.md
