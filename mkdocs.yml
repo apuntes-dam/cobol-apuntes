@@ -93,3 +93,13 @@ nav:
       - "9.1 Archivos indexados": u09/01-archivos-indexados.md
       - "9.2 En mainframe real: VSAM y Db2": u09/02-vsam-db2.md
       - "9.3 · Ejercicios de archivos indexados": u09/ejercicios-archivos-indexados.md
+  - "U10 · Búsquedas y ordenación":
+      - u10/index.md
+      - "10.1 Buscar en una tabla: SEARCH y SEARCH ALL": u10/01-busquedas.md
+      - "10.2 Ordenar: a mano y con SORT": u10/02-ordenar.md
+      - "10.3 · Ejercicios de búsquedas y ordenación": u10/ejercicios-busquedas-ordenacion.md
+  - "U11 · Textos y fechas":
+      - u11/index.md
+      - "11.1 Fechas": u11/01-fechas.md
+      - "11.2 Formatear texto y números": u11/02-formatear.md
+      - "11.3 · Ejercicios de textos y fechas": u11/ejercicios-textos-fechas.md
