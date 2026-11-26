@@ -103,3 +103,6 @@ nav:
       - "11.1 Fechas": u11/01-fechas.md
       - "11.2 Formatear texto y números": u11/02-formatear.md
       - "11.3 · Ejercicios de textos y fechas": u11/ejercicios-textos-fechas.md
+  - "U12 · Proyecto final":
+      - u12/index.md
+      - "12.1 Proyecto: clientes y pedidos": u12/01-proyecto.md
