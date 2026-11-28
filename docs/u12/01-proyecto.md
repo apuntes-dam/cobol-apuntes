@@ -39,13 +39,22 @@ Primero se valida **todo** (líneas y existencias suficientes); solo si todo es 
 Antes de escribir una sola línea de código: decide formato, codificación, tamaños de campo, una versión del formato y qué pasa si algo falla al leer. Empieza por guardar y recuperar un catálogo de prueba (archivos de texto, [U7](../u07/01-archivos.md)). Comprueba qué pasa con un registro incompleto, uno duplicado y el archivo que no existe — los mismos casos límite que ya viste en U7 con `FILE STATUS`.
 
 !!! warning "Nunca sustituyas el único archivo válido a medias"
-    Mientras escribes la nueva versión del archivo, el anterior tiene que seguir intacto por si algo falla a mitad de la escritura. Escribe a un archivo temporal y solo al final sustitúyelo; qué garantías da exactamente tu sistema operativo en ese paso hay que comprobarlo, no suponerlo.
+    Escribe la nueva versión en un archivo temporal, **en el mismo directorio** que el definitivo (para que el cambio de nombre sea atómico). Comprueba el `FILE STATUS` de `OPEN`, de cada `WRITE` y de `CLOSE` del temporal; solo si todo ha ido bien, llama a la rutina del *runtime* de GnuCOBOL `CBL_RENAME_FILE` para sustituir el definitivo por el temporal (sin borrar antes el definitivo) y comprueba el código que devuelve antes de dar el guardado por bueno.
+
+**Aceptación**: interrumpe el programa a propósito justo después de escribir el primer registro del archivo temporal, antes de llegar a `CBL_RENAME_FILE`. Al reiniciar, el archivo definitivo debe conservar exactamente su contenido anterior: quien lo abra ve la versión vieja completa o la nueva completa, nunca una mezcla. Esto demuestra que un fallo a medias no corrompe el archivo; no demuestra qué pasa si se va la luz a mitad del propio renombrado (es una garantía del sistema de archivos, no de tu programa), y no se aplica igual si usas archivos indexados en la Etapa 5 (un solo `CBL_RENAME_FILE` no sustituye a la vez todos los componentes físicos que use ese motor).
 
 ## Etapa 5 · Altas, cambios y bajas
 
-Modificar nombre y precio. Un cliente con pedidos históricos **no se borra**: se da de **baja lógica** (un campo de estado, como en [U5](../u05/01-sin-herencia.md)), para no perder la referencia desde sus pedidos antiguos. Si usas archivos `INDEXED` ([U9](../u09/01-archivos-indexados.md)), documenta qué backend usas, cuál es la clave principal, el modo de acceso y cómo tratas los bloqueos.
+Modificar nombre y precio. Un cliente con pedidos históricos **no se borra**: se da de **baja lógica** (un campo de estado, como en [U5](../u05/01-sin-herencia.md)), para no perder la referencia desde sus pedidos antiguos.
 
-**Aceptación**: cambiar el precio de un producto **no** cambia el importe de los pedidos ya hechos (el precio copiado en la etapa 2 es el que manda). Desactivar un cliente le impide hacer pedidos nuevos, pero se puede seguir consultando su historial.
+**Camino obligatorio (archivo de texto):** al cargar el archivo, construye un **índice en memoria por identificador** (una tabla `OCCURS`, como en la Etapa 2) para no releer todo el archivo en cada búsqueda. Se admite una sola instancia del programa accediendo a la vez al archivo de datos: con eso basta, no hace falta tratar bloqueos entre procesos en este camino.
+
+**Aceptación**: un alta con clave repetida se rechaza; dar de baja un cliente concreto deja de baja **ese** cliente y ningún otro; los cambios (altas, bajas, modificaciones) se conservan al cerrar y reabrir el programa. Cambiar el precio de un producto **no** cambia el importe de los pedidos ya hechos (el precio copiado en la etapa 2 es el que manda). Desactivar un cliente le impide hacer pedidos nuevos, pero se puede seguir consultando su historial.
+
+!!! tip "Ampliación: archivos indexados y bloqueos"
+    Si quieres, sustituye el archivo de texto por `ORGANIZATION IS INDEXED` ([U9](../u09/01-archivos-indexados.md)) — **requiere una compilación de GnuCOBOL con soporte para archivos indexados** (no toda instalación de GnuCOBOL lo trae de serie; hay varios motores posibles, no solo VISAM). Documenta qué motor usas, cuál es la clave principal y el modo de acceso.
+
+    Para probar bloqueos hace falta que **dos procesos compitan de verdad** por el archivo: abre el programa en dos terminales a la vez, deja uno con un registro bloqueado y que el otro intente modificar **ese mismo registro**. Anota qué pasa con tu configuración concreta y qué pasa al liberar el bloqueo. Si el segundo falla ya en el `OPEN` del archivo, eso demuestra un conflicto a nivel de **archivo**, no de **registro**: son pruebas distintas, no las confundas.
 
 ## Etapa 6 · Informe y lotes
 
